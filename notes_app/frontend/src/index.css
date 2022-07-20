@@ -1,0 +1,115 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: grey;
+    font-family: 'Inter', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    color: #a6a6a6;
+}
+
+
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 40vw;
+    background-color: #e6e6e6;
+}
+
+.container .header{
+    background-color:  #b3b3b3;
+    padding: 1.3rem;
+    font-size: 1.6rem;
+}
+
+.notes-list{
+    padding: 1rem;
+}
+
+.plus-button{
+    background-color: #b3b3b3;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    float: right;
+    height: 2.6rem;
+    padding: .5rem;
+    margin-block: .7rem;
+}
+
+.plus-button svg{
+    height: 20px;
+}
+
+.plus-button:hover{
+    background-color: #cccccc;
+}
+
+.note{
+    border-bottom:#786121 solid 1.5px;
+    padding: 1rem;
+}
+
+.note-title{
+    text-transform: uppercase;
+}
+
+.notes-list span{
+    float: right;
+}
+
+.note-element {
+    margin-inline: 1.3rem;
+}
+
+.arrow-back{
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+    padding: .4rem;
+}
+
+.arrow-back:hover{
+    background-color: #cccccc;
+}
+
+.note-element h1{
+    padding-bottom: .4rem;
+    border-bottom:#786121 solid 1.5px;
+}
+
+.note-element p{
+    margin-bottom: 2.4rem;
+    word-break: break-all;
+}
+
+textarea {
+    background-color: #cccccc;
+    border: none;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    margin-bottom: 1rem;
+    width: 90%;
+    height: 30vh;
+    resize: none;
+  }
+  
+textarea:active,
+textarea:focus{
+    outline: none;
+    border: none;
+  }

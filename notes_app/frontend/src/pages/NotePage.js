@@ -10,6 +10,7 @@ export default function NotePage(props) {
 
     useEffect(() => {
         getNote()
+        props.toggleEditButton(prev => !prev)
     }, [id])
 
     const getNote = async () => {
@@ -33,7 +34,8 @@ export default function NotePage(props) {
             <Link to={"/"}>
                 <button onClick={updateNote} className="arrow-back">{<IoIosArrowBack/>}</button>
             </Link>
-            <input defaultValue={note?.title}></input>
+            <br/>
+            <input maxLength="20" onChange={e => setNote({...note, "title": e.target.value})} defaultValue={note?.title}></input>
             <textarea onChange={e => setNote({...note, "body": e.target.value})} defaultValue={note?.body}></textarea>
         </div>
     )

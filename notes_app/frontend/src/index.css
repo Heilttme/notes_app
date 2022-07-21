@@ -8,6 +8,7 @@ body{
 
 a{
     text-decoration: none;
+    color: black;
 }
 
 a:visited{
@@ -27,6 +28,7 @@ a:hover{
 
 .container{
     width: 40vw;
+    min-width: 30rem;
     background-color: #e6e6e6;
 }
 
@@ -34,6 +36,21 @@ a:hover{
     background-color:  #b3b3b3;
     padding: 1.3rem;
     font-size: 1.6rem;
+}
+
+.container .header .edit-button{
+    float: right;
+    font-size: 1.2rem;
+    background-color: #d9d9d9;
+    border: none;
+    cursor: pointer;
+    margin-top: 4px;
+    padding: .2rem .6rem;
+    border-radius: 6px;
+}
+
+.container .header .edit-button:hover{
+    background-color: #cccccc;
 }
 
 .notes-list{
@@ -60,7 +77,7 @@ a:hover{
 }
 
 .note{
-    border-bottom:#786121 solid 1.5px;
+    border-bottom: grey solid 1.5px;
     padding: 1rem;
 }
 
@@ -77,6 +94,7 @@ a:hover{
 }
 
 .arrow-back{
+    background-color: #cccccc;
     border: none;
     cursor: pointer;
     margin-top: 1rem;
@@ -84,7 +102,7 @@ a:hover{
 }
 
 .arrow-back:hover{
-    background-color: #cccccc;
+    background-color:  #d9d9d9;
 }
 
 .note-element h1{
@@ -100,12 +118,13 @@ a:hover{
 textarea {
     background-color: #cccccc;
     border: none;
-    padding-block: 1rem;
-    padding-inline: 1rem;
+    padding: 1rem;
     margin-bottom: 1rem;
+    margin-left: 1rem;
     width: 90%;
     height: 30vh;
     resize: none;
+    font-size: 1rem;
   }
   
 textarea:active,
@@ -113,3 +132,19 @@ textarea:focus{
     outline: none;
     border: none;
   }
+
+input{
+    background: none;
+    border: none;
+    padding: 1rem;
+    padding-bottom: .4rem;
+    border-bottom:#786121 solid 1.5px;
+    margin: 1rem;
+    width: 90%;
+    font-size: 1.6rem;
+}
+
+input:active,
+input:focus{
+    outline: none;
+}

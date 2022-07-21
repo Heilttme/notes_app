@@ -17,8 +17,19 @@ def getNote(request, id):
     return Response(serializer.data)
 
 @api_view(["PUT"])
-def addNote(request, id):
+def updateNote(request, id):
     note = Note.objects.get(id=id)
+    serializer = NoteSerializer(instance=note, data=request.data)
+
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    return Response(serializer.errors)
+
+@api_view(["POST"])
+def addNote(request):
+    notes = Note.objects.all()
+    note = Note()
     serializer = NoteSerializer(instance=note, data=request.data)
 
     if serializer.is_valid():

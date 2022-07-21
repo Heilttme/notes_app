@@ -19,6 +19,12 @@ a:hover{
     color: #a6a6a6;
 }
 
+.edit-button:active,
+.arrow-back:active,
+.plus-button:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
 
 .App{
     display: flex;
@@ -31,6 +37,10 @@ a:hover{
     min-width: 30rem;
     background-color: #e6e6e6;
 }
+
+/*        */
+/* HEADER */
+/*        */
 
 .container .header{
     background-color:  #b3b3b3;
@@ -53,6 +63,12 @@ a:hover{
     background-color: #cccccc;
 }
 
+
+/*            */
+/* NOTES-LIST */
+/*            */
+
+
 .notes-list{
     padding: 1rem;
 }
@@ -62,10 +78,9 @@ a:hover{
     border: none;
     border-radius: 20px;
     cursor: pointer;
-    float: right;
     height: 2.6rem;
     padding: .5rem;
-    margin-block: .7rem;
+    margin-block: .85rem 0;
 }
 
 .plus-button svg{
@@ -79,15 +94,48 @@ a:hover{
 .note{
     border-bottom: grey solid 1.5px;
     padding: 1rem;
+    /* animation: note-appear 1s 1; */
 }
+
+/* @keyframes note-appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+} */
 
 .note-title{
     text-transform: uppercase;
 }
 
+
 .notes-list span{
     float: right;
 }
+
+.delete-button{
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    animation: show 700ms 1;
+}
+
+
+@keyframes show {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+/*              */
+/* NOTE-ELEMENT */
+/*              */
 
 .note-element {
     margin-inline: 1.3rem;
@@ -105,10 +153,6 @@ a:hover{
     background-color:  #d9d9d9;
 }
 
-.note-element h1{
-    padding-bottom: .4rem;
-    border-bottom:#786121 solid 1.5px;
-}
 
 .note-element p{
     margin-bottom: 2.4rem;
@@ -138,7 +182,7 @@ input{
     border: none;
     padding: 1rem;
     padding-bottom: .4rem;
-    border-bottom:#786121 solid 1.5px;
+    border-bottom: grey solid 1.5px;
     margin: 1rem;
     width: 90%;
     font-size: 1.6rem;

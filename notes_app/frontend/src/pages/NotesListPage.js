@@ -7,7 +7,7 @@ export default function NotesListPage(props) {
     const [reload, setReload] = useState(0)
 
     useEffect(() => {
-        props.toggleEditButton(prev => !prev)
+        props.toggleEditButton(prev => true)
     },[])
 
     useEffect(() => {

@@ -10,7 +10,7 @@ export default function NotePage(props) {
 
     useEffect(() => {
         getNote()
-        props.toggleEditButton(prev => !prev)
+        props.toggleEditButton(prev => false)
     }, [id])
 
     const getNote = async () => {

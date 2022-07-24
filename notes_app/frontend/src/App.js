@@ -3,7 +3,7 @@ import "./index.css"
 import Header from "./components/Header";
 import NotesListPage from "./pages/NotesListPage";
 import NotePage from "./pages/NotePage";
-import { BrowserRouter as Router, Routes, Route, useSearchParams } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, useSearchParams } from "react-router-dom";
 
 export default function App() {
   const [showEditButton, toggleEditButton] = useState(false)
